@@ -222,7 +222,7 @@ public class Persons {
         // Add person at correct position according to counts array
         for (int i = paddedNames.length - 1; i >= 0; i--) {
             int letterIdx = paddedNames[i].charAt(position) - minKey;
-            int personIdx = counts[letterIdx] - 1; // array starts from 0 not 1
+            int personIdx = counts [letterIdx] - 1; // array starts from 0 not 1
 
             sortedPersons[personIdx] = persons[i];
             sortedNames[personIdx] = paddedNames[i];

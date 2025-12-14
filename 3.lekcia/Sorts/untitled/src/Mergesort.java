@@ -24,7 +24,6 @@ public class Mergesort {
 
     private static void merge(int[] arr, int left, int pivot, int right) {
         // Create 2 new sub arrays LEFT and RIGHT, that will be merged afterward
-
         int leftSize = pivot - left + 1;  // size of the left subarray
         int rightSize = right - pivot; // size of the right subarray
 
