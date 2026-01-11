@@ -49,6 +49,30 @@ public class Persons {
         }
     }
 
+
+    // Bubble sort, Time: O(nˆ2), Space: O(1), Stable (positions are preserved die to the operator >)
+    public void sortByHeight() {
+        boolean swapped = true;
+        int n = persons.length;
+
+        while (swapped) {
+            // Iterate through the unsorted part <i-n)
+            for (int i = 1; i < n ; i++) {
+                swapped = false; // reset the swap sign
+
+                int j = i-1;
+                if(persons[j].getHeight() > persons[i].getHeight()) {
+                    swapped = true;
+                    // Swap
+                    Person temp = persons[i];
+                    persons[i] = persons[j];
+                    persons[j] = temp;
+                }
+            }
+            n--;  // the end of the array is already sorted, so we can ignore it
+        }
+    }
+
     /**
      * Sorts the array of Person objects by height. Internally it uses merge sort O(n*log(n)).
      *
